@@ -1,0 +1,66 @@
+name: trainee_task
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+    
+  cupertino_icons: ^1.0.2
+  http: ^0.13.4
+  equatable: ^2.0.3
+  url_launcher: ^6.1.5
+  localize_and_translate: any
+  intl: ^0.17.0
+  tweet_ui: ^4.0.2
+  flutter_polls: any
+  youtube_player_flutter: ^8.0.0
+  open_file: ^3.2.1
+  file_picker: ^4.6.1
+  flutter_bloc: ^8.0.1
+  
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/lang/
+    - assets/fonts/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+fonts:
+    - family: JannaLT
+      fonts:
+        - asset: assets/fonts/JannaLT-Regular.ttf
+
+  

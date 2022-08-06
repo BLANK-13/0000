@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:trainee_task/constants.dart';
+
+import '../widgets/app_bar_image.dart';
+
+class ContactUsDone extends StatelessWidget {
+  const ContactUsDone({Key? key}) : super(key: key);
+  final int id = 12345;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Image.asset(
+          'assets/images/bigIcon.png',
+          height: 40,
+          width: 61,
+          // scale: .7,
+        ),
+        backgroundColor: const Color(0xFF0F1737),
+        toolbarHeight: 100,
+        centerTitle: true,
+        flexibleSpace: AppBarImage(img: 'assets/images/NewsCels.png'),
+        leading: IconButton(
+          icon: const Icon(Icons.close),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+         Center(
+          child: Text(
+            "success".tr(),
+            style: TextStyle(
+              color: mainColor,
+              fontSize: 22,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Center(
+          child: Text(
+            isAr? 'رقم الطلب: $id': 'Order number: $id',
+            style: const TextStyle(fontSize: 17, color: Color(0xFF707070)),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Center(child: Image.asset('assets/images/Image 2.png')),
+        const SizedBox(
+          height: 145,
+        ),
+      ]),
+    );
+  }
+}
