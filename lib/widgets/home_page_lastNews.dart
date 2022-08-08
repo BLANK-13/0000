@@ -40,18 +40,16 @@ class HomePageLastNews extends StatelessWidget {
             ),
           ],
         ),
-        Row(
-          children: [
-            const SizedBox(width: 10),
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
+        ListTile(
+          visualDensity: const VisualDensity(vertical: -4),
+          title: Text(
+            title,
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
             ),
-          ],
+          ),
         ),
       ],
     );

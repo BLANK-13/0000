@@ -14,35 +14,41 @@ class HomePagePoll extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                width: 100,
-                height: 80,
-                margin: const EdgeInsets.all(15.0),
-                padding: const EdgeInsets.all(3.0),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    border: Border.all(color: const Color(0xFFD1D1D1))),
-                child: Image.asset('assets/images/Hilal_logo.png'),
+              Flexible(
+                child: Container(
+                  width: 100,
+                  height: 80,
+                  margin: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(3.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(color: const Color(0xFFD1D1D1))),
+                  child: Image.asset('assets/images/Hilal_logo.png'),
+                ),
               ),
-              Container(
-                width: 100,
-                height: 80,
-                margin: const EdgeInsets.all(15.0),
-                padding: const EdgeInsets.all(3.0),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    border: Border.all(color: const Color(0xFFD1D1D1))),
-                child: Image.asset('assets/images/Hilal_logo.png'),
+              Flexible(
+                child: Container(
+                  width: 100,
+                  height: 80,
+                  margin: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(3.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(color: const Color(0xFFD1D1D1))),
+                  child: Image.asset('assets/images/Hilal_logo.png'),
+                ),
               ),
-              Container(
-                width: 100,
-                height: 80,
-                margin: const EdgeInsets.all(15.0),
-                padding: const EdgeInsets.all(3.0),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    border: Border.all(color: const Color(0xFFD1D1D1))),
-                child: Image.asset('assets/images/Hilal_logo.png'),
+              Flexible(
+                child: Container(
+                  width: 100,
+                  height: 80,
+                  margin: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(3.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(color: const Color(0xFFD1D1D1))),
+                  child: Image.asset('assets/images/Hilal_logo.png'),
+                ),
               ),
             ],
           ),

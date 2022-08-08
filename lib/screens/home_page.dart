@@ -9,7 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 
 import '../constants.dart';
-import '../widgets/home_page_lastNewsImage.dart';
+import '../widgets/home_page_lastNews.dart';
 import '../widgets/home_page_poll.dart';
 import '../widgets/home_page_sponsors.dart';
 import '../widgets/home_page_table.dart';
@@ -54,37 +54,31 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               const SizedBox(height: 10),
-              Row(
-                children: [
-                  const SizedBox(width: 10),
-                  Flexible(
-                    child: Text(
-                      "lastNews".tr(),
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
+              ListTile(
+                dense: true,
+                visualDensity: const VisualDensity(vertical: -4),
+                leading: Text(
+                  "lastNews".tr(),
+                  style: const TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NewsListPage()));
+                  },
+                  child: Text(
+                    "more".tr(),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Color(0xFF0070AC),
                     ),
                   ),
-                  isAr
-                      ? const SizedBox(width: 278)
-                      : const SizedBox(width: 258),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const NewsListPage()));
-                    },
-                    child: Text(
-                      "more".tr(),
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Color(0xFF0070AC),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
               BlocBuilder<HomeNewsBloc, HomeNewsState>(
                 builder: (context, state) {
@@ -118,33 +112,27 @@ class _HomePageState extends State<HomePage> {
               ),
 
               const SizedBox(height: 30),
-              Row(
-                children: [
-                  const SizedBox(width: 10),
-                  Flexible(
-                    child: Text(
-                      "nextMatch".tr(),
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
+              ListTile(
+                dense: true,
+                visualDensity: const VisualDensity(vertical: -4),
+                leading: Text(
+                  "nextMatch".tr(),
+                  style: const TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: InkWell(
+                  onTap: () => launchUrl(
+                      Uri.parse('https://spl.sa/en/season-matches-schedule')),
+                  child: Text(
+                    "more".tr(),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Color(0xFF0070AC),
                     ),
                   ),
-                  isAr
-                      ? const SizedBox(width: 245)
-                      : const SizedBox(width: 225),
-                  InkWell(
-                    onTap: () => launchUrl(
-                        Uri.parse('https://spl.sa/en/season-matches-schedule')),
-                    child: Text(
-                      "more".tr(),
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Color(0xFF0070AC),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
               const SizedBox(height: 10),
               const HomePageTableWidget(),
@@ -153,38 +141,31 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 1),
               const HomePageTableWidget(), //matches table
               const SizedBox(height: 30),
-              Row(
-                children: [
-                  const SizedBox(width: 13),
-                  Flexible(
-                    child: Text(
-                      "latestTweets".tr(),
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
+              ListTile(
+                dense: true,
+                visualDensity: const VisualDensity(vertical: -4),
+                leading: Text(
+                  "latestTweets".tr(),
+                  style: const TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                  ),
+                ),
+                trailing: InkWell(
+                  onTap: () => launchUrl(Uri.parse('https://twitter.com/SPL')),
+                  child: Text(
+                    "more".tr(),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Color(0xFF0070AC),
                     ),
                   ),
-                  isAr
-                      ? const SizedBox(width: 258)
-                      : const SizedBox(width: 228),
-                  InkWell(
-                    onTap: () =>
-                        launchUrl(Uri.parse('https://twitter.com/SPL')),
-                    child: Text(
-                      "more".tr(),
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Color(0xFF0070AC),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
               const SizedBox(height: 10),
-              const HomePageTweets(),
+              const SizedBox(height: 210, child: HomePageTweets()),
               const SizedBox(height: 1),
-              const HomePageTweets(),
+              const SizedBox(height: 210, child: HomePageTweets()),
               const SizedBox(height: 30),
               Row(children: [
                 const SizedBox(width: 10),
@@ -212,14 +193,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               ]),
               Container(
-                height: 255,
+                height: 220,
                 width: double.infinity,
                 color: Colors.white,
-                child: Container(
-                  margin: const EdgeInsets.all(20),
-                  width: 343,
-                  height: 195,
-                  child: HomePageVideo(),
+                child: Center(
+                  child: Container(
+                    margin: const EdgeInsets.all(20),
+                    width: 343,
+                    height: 195,
+                    child: HomePageVideo(),
+                  ),
                 ), //NewsPageVideo(), <- see the problem of the youtube player.
               ),
 

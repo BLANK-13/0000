@@ -50,6 +50,7 @@ class MorePageOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: 8,
         itemBuilder: (context, index) {
           return Column(
@@ -84,9 +85,7 @@ class MorePageOptions extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 12,
-              )
+              isAr ? const SizedBox() : const SizedBox(height: 12)
             ],
           );
         });
