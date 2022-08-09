@@ -12,8 +12,8 @@ class ContactUsFields1 extends StatelessWidget {
     '05XXXXXXXXX'
   ];
   final List<String> fieldNames = [
-   "firstName".tr(),
-   "lastName".tr(),
+    "firstName".tr(),
+    "lastName".tr(),
     "email".tr(),
     "phone".tr(),
   ];
@@ -40,7 +40,7 @@ class ContactUsFields1 extends StatelessWidget {
                     ),
                     Text(
                       fieldNames[index],
-                      style:  TextStyle(
+                      style: const TextStyle(
                         color: mainColor,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -77,8 +77,6 @@ class ContactUsFields1 extends StatelessWidget {
         });
   }
 
-  
-
   Widget _createTF(
     context,
     String lable,
@@ -88,7 +86,7 @@ class ContactUsFields1 extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: TextField(
-          style:  TextStyle(
+          style: const TextStyle(
             color: mainColor,
             fontSize: 15,
           ),

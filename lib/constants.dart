@@ -3,7 +3,6 @@ import 'package:intl/intl.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
 String getFormattedDate(String date) {
-  print(date);
   return DateFormat('dd MMMM yyyy', translator.activeLanguageCode)
       .format(DateTime.parse(date));
 }
@@ -38,6 +37,30 @@ Widget buildErrorWidget(String error) {
           style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold),
         ),
       ],
+    ),
+  );
+}
+
+Widget _createTF(
+  context,
+  String lable,
+  var controller,
+) {
+  return Container(
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: TextField(
+        style: const TextStyle(
+          color: mainColor,
+          fontSize: 15,
+        ),
+        controller: controller,
+        decoration: InputDecoration(
+          fillColor: Colors.transparent,
+          hintText: lable,
+        ),
+        cursorColor: Theme.of(context).primaryColor,
+      ),
     ),
   );
 }

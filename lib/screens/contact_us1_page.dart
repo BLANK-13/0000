@@ -19,7 +19,7 @@ class ContactUs1Page extends StatelessWidget {
           title: Column(
             children: [
               const SizedBox(
-                height: 25,
+                height: 10,
               ),
               Image.asset(
                 'assets/images/bigIcon.png',
@@ -33,35 +33,24 @@ class ContactUs1Page extends StatelessWidget {
           centerTitle: true,
           bottom: TabBar(
             indicatorWeight: 5,
-            labelColor:  mainColor,
-            indicatorColor:  mainColor,
+            labelColor: mainColor,
+            indicatorColor: mainColor,
             tabs: [
-              Row(
-                children:  [
-                  SizedBox(
-                    height: 50,
-                    width: 70,
-                  ),
-                  Text(
-                    "data".tr(),
-                    style: TextStyle(fontSize: 20),
-                  )
-                ],
-              ),
-              Row(
-                children:  [
-                  SizedBox(
-                    height: 50,
-                    width: 80,
-                  ),
-                  Flexible(
+              ListTile(
+                dense: true,
+                visualDensity: const VisualDensity(vertical: -4),
+                title: Center(
                     child: Text(
-                      "nextInfo".tr(),
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  ),
-                ],
+                  "data".tr(),
+                  style: const TextStyle(fontSize: 20),
+                )),
               ),
+              Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                Text(
+                  "nextInfo".tr(),
+                  style: const TextStyle(fontSize: 15),
+                ),
+              ]),
             ],
           ),
           flexibleSpace:
@@ -89,9 +78,9 @@ class ContactUs1Page extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-             Text(
+            Text(
               "contactUs".tr(),
-              style: TextStyle(
+              style: const TextStyle(
                 color: mainColor,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,

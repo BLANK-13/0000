@@ -10,7 +10,6 @@ class NewsPage extends StatelessWidget {
   final NewsModel news;
   const NewsPage({Key? key, required this.news}) : super(key: key);
 
-
   String get formatDate =>
       DateFormat('dd MMMM yyyy', translator.activeLanguageCode)
           .format(DateTime.parse(news.createdAt));
@@ -21,7 +20,7 @@ class NewsPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor:  mainColor,
+            backgroundColor: mainColor,
             leading: IconButton(
               icon: const Icon(Icons.arrow_back_ios_rounded),
               onPressed: () => Navigator.pop(context),
@@ -49,13 +48,12 @@ class NewsPage extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Color(0x00000000),
                   ),
                 ),
                 const SizedBox(height: 10),
-                 Text(
+                Text(
                   "sportsLeague".tr(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     color: Color(0xFF6A6666),
                   ),
@@ -102,6 +100,4 @@ class NewsPage extends StatelessWidget {
       ),
     );
   }
-
-
 }

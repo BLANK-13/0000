@@ -20,7 +20,7 @@ class ContactUs2Page extends StatelessWidget {
           title: Column(
             children: [
               const SizedBox(
-                height: 25,
+                height: 10,
               ),
               Image.asset(
                 'assets/images/bigIcon.png',
@@ -33,51 +33,29 @@ class ContactUs2Page extends StatelessWidget {
           toolbarHeight: 66,
           centerTitle: true,
           bottom: TabBar(
-            indicatorWeight: 5,
-            labelColor: mainColor,
-            indicatorColor: mainColor,
-            tabs: [
-              Row(
-                children: [
-                  isAr
-                      ? const SizedBox(height: 50, width: 70)
-                      : const SizedBox(height: 50, width: 30),
-                  Text(
-                    "info".tr(),
-                    style: const TextStyle(fontSize: 20),
+              indicatorWeight: 5,
+              labelColor: mainColor,
+              indicatorColor: mainColor,
+              tabs: [
+                ListTile(
+                  title: Row(
+                    children: [
+                      const SizedBox(width: 30),
+                      Text(
+                        "info".tr(),
+                        style: const TextStyle(fontSize: 20),
+                      ),
+                    ],
                   ),
-                  const SizedBox(
-                    width: 155,
-                  ),
-                  Expanded(
+                  trailing: Expanded(
                     child: Text(
                       "nextSend".tr(),
                       style: const TextStyle(
                           fontSize: 15, color: Color(0xFF707070)),
                     ),
                   ),
-                ],
-              ),
-            ],
-          ),
-          flexibleSpace:
-              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                Text(
-                  '2/2',
-                  style: TextStyle(fontSize: 13, color: Color(0xFF707070)),
-                ),
-                SizedBox(
-                  width: 15,
-                ),
-              ],
-            ),
-          ]),
+                )
+              ]),
         ),
         body: Column(
           children: [
@@ -104,7 +82,7 @@ class ContactUs2Page extends StatelessWidget {
               btnText: "send".tr(),
               ContactStep: 2,
             ),
-            const SizedBox(height: 40)
+            const SizedBox(height: 20) //was 40
           ],
         ),
       ),

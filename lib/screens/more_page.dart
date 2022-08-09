@@ -30,13 +30,13 @@ class MorePage extends StatelessWidget {
           ),
           const MorePageSocials(),
           const SizedBox(
-            height: 17,
+            height: 40,
           ),
           TextButton(
             onPressed: () => translator.setNewLanguage(context,
                 newLanguage: isAr ? 'en' : 'ar'),
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 15),
+              textStyle: const TextStyle(fontSize: 20),
             ),
             child: Center(
               child: Row(
@@ -52,6 +52,7 @@ class MorePage extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 10)
         ],
       ),
     );

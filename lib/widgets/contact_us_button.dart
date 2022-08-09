@@ -44,14 +44,17 @@ class ContactUsButton extends StatelessWidget {
                 ContactUsFields1.errors[0] = ContactUsFields1.errors[1] =
                     ContactUsFields1.errors[2] = '';
               }
-              if (_isValid) {
+              //TODO remove this
+              if (_isValid || true) {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ContactUs2Page()));
               } else {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => ContactUs1Page()));
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ContactUs1Page()));
               }
               break;
             case 2:
@@ -70,12 +73,12 @@ class ContactUsButton extends StatelessWidget {
               }
               if (_isValid) {
                 int count = 0;
-               // Navigator.popUntil(context, (route) => false);
+                // Navigator.popUntil(context, (route) => false);
                 Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ContactUsDone()),
-                  (route) => count++ >=2,
+                  (route) => count++ >= 2,
                 );
               } else {
                 Navigator.pushReplacement(
@@ -91,8 +94,7 @@ class ContactUsButton extends StatelessWidget {
               RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           )),
-          backgroundColor:
-              MaterialStateProperty.all<Color>(mainColor),
+          backgroundColor: MaterialStateProperty.all<Color>(mainColor),
         ),
         child: Text(
           btnText,
@@ -104,7 +106,4 @@ class ContactUsButton extends StatelessWidget {
       ),
     );
   }
-
-
-  
 }

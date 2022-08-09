@@ -16,7 +16,21 @@ class NewsListFeed extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return Center(
           child: InkWell(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage(news: NewsModel(contentAr: news[index].contentAr , contentEn: news[index].contentEn, titleAr: news[index].titleAr, titleEn: news[index].titleEn,image: news[index].image, createdAt: news[index].createdAt, id: news[index].id)))),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => NewsPage(
+                  news: NewsModel(
+                      contentAr: news[index].contentAr,
+                      contentEn: news[index].contentEn,
+                      titleAr: news[index].titleAr,
+                      titleEn: news[index].titleEn,
+                      image: news[index].image,
+                      createdAt: news[index].createdAt,
+                      id: news[index].id),
+                ),
+              ),
+            ),
             child: Card(
               clipBehavior: Clip.antiAlias,
               child: Container(
@@ -39,32 +53,43 @@ class NewsListFeed extends StatelessWidget {
                     Expanded(
                       flex: 14,
                       child: Container(
-                        padding: const EdgeInsets.only(top: 5),
+                        padding: isAr
+                            ? const EdgeInsets.only(top: 0)
+                            : const EdgeInsets.only(top: 8),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                             Text(
+                            Text(
                               "sportsLeague".tr(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 16,
                                 color: Color(0xFF6A6666),
                               ),
                             ),
-                            Text(
-                              news[index].titleEn,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
+                            Flexible(
+                              flex: 3,
+                              child: Text(
+                                isAr
+                                    ? news[index].titleAr
+                                    : news[index].titleEn,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                            const SizedBox(height: 10),
-                            Text(
-                              getFormattedDate(news[index].createdAt),
-                              style: const TextStyle(
-                                fontSize: 11,
-                                color: Color(0xFF7C7C7C),
+                            isAr
+                                ? const SizedBox()
+                                : const SizedBox(height: 20),
+                            Expanded(
+                              child: Text(
+                                getFormattedDate(news[index].createdAt),
+                                style: const TextStyle(
+                                  fontSize: 11,
+                                  color: Color(0xFF7C7C7C),
+                                ),
                               ),
                             ),
                           ],
