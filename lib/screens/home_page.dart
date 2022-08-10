@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: mainColor,
             toolbarHeight: 100,
             centerTitle: true,
-            flexibleSpace: AppBarImage(img: 'assets/images/NewsCels.png')),
+            flexibleSpace: AppBarImage(img: 'assets/images/app_bar.jpg')),
         body: SingleChildScrollView(
           child: Column(
             children: [

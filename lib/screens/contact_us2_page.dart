@@ -49,12 +49,21 @@ class ContactUs2Page extends StatelessWidget {
                     ],
                   ),
                   trailing: Expanded(
-                    child: Text(
-                      "nextSend".tr(),
-                      style: const TextStyle(
-                          fontSize: 15,
-                          color: Color(0xFF707070),
-                          fontFamily: 'JannaLT'),
+                    child: Column(
+                      children: [
+                        const Text(
+                          '2/2',
+                          style:
+                              TextStyle(fontSize: 13, color: Color(0xFF707070)),
+                        ),
+                        Text(
+                          "nextSend".tr(),
+                          style: const TextStyle(
+                              fontSize: 15,
+                              color: Color(0xFF707070),
+                              fontFamily: 'JannaLT'),
+                        ),
+                      ],
                     ),
                   ),
                 )

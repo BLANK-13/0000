@@ -38,7 +38,7 @@ class _NewsListPageState extends State<NewsListPage> {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            flexibleSpace: AppBarImage(img: 'assets/images/NewsCels.png'),
+            flexibleSpace: AppBarImage(img: 'assets/images/app_bar.jpg'),
             title: Image.asset(
               'assets/images/bigIcon.png',
               height: 40,
