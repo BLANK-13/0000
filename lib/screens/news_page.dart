@@ -56,6 +56,7 @@ class NewsPage extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 16,
                     color: Color(0xFF6A6666),
+                    fontFamily: 'JannaLT',
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -64,6 +65,7 @@ class NewsPage extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 11,
                     color: Color(0xFF7C7C7C),
+                    fontFamily: 'JannaLT',
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -72,6 +74,7 @@ class NewsPage extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 14,
                     color: Color(0xFF131314),
+                    fontFamily: 'JannaLT',
                   ),
                 ),
               ]),

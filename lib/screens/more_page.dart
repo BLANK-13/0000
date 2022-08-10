@@ -44,7 +44,10 @@ class MorePage extends StatelessWidget {
                 children: [
                   Text(
                     isAr ? 'English' : 'العربي',
-                    style: const TextStyle(color: Colors.white),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'JannaLT',
+                    ),
                   ),
                   const SizedBox(width: 10),
                   Image.asset('assets/images/ic_g_translate_24px.png'),

@@ -61,6 +61,7 @@ class HomePagePoll extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
+                  fontFamily: 'JannaLT',
                 ),
               ),
               Text(
@@ -69,6 +70,7 @@ class HomePagePoll extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
+                  fontFamily: 'JannaLT',
                 ),
               ),
               Text(
@@ -77,6 +79,7 @@ class HomePagePoll extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
+                  fontFamily: 'JannaLT',
                 ),
               ),
             ],
@@ -92,6 +95,7 @@ class HomePagePoll extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xFF7C7C7C),
+                  fontFamily: 'JannaLT',
                 ),
               ),
               Text(
@@ -99,6 +103,7 @@ class HomePagePoll extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xFF7C7C7C),
+                  fontFamily: 'JannaLT',
                 ),
               ),
               Text(
@@ -106,6 +111,7 @@ class HomePagePoll extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xFF7C7C7C),
+                  fontFamily: 'JannaLT',
                 ),
               ),
             ],

@@ -63,6 +63,7 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
                     style: const TextStyle(
                       color: mainColor,
                       fontSize: 17,
+                      fontFamily: 'JannaLT',
                     ),
                   ),
                   const SizedBox(
@@ -96,6 +97,7 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
                     style: const TextStyle(
                       color: mainColor,
                       fontSize: 17,
+                      fontFamily: 'JannaLT',
                     ),
                   ),
                   const SizedBox(

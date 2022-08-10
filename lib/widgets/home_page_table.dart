@@ -27,19 +27,28 @@ class HomePageTableWidget extends StatelessWidget {
           Text(
             isAr ? 'الهلال' : 'Hilal',
             style: const TextStyle(
-                fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+              fontSize: 15,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'JannaLT',
+            ),
           ),
           Text(
             hourFormat,
             style: const TextStyle(
               fontSize: 12,
               color: Colors.black,
+              fontFamily: 'JannaLT',
             ),
           ),
           Text(
             isAr ? 'الهلال' : 'Hilal',
             style: const TextStyle(
-                fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+              fontSize: 15,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'JannaLT',
+            ),
           ),
         ],
       ),
@@ -51,6 +60,7 @@ class HomePageTableWidget extends StatelessWidget {
             style: const TextStyle(
               fontSize: 14,
               color: Color(0xFF7C7C7C),
+              fontFamily: 'JannaLT',
             ),
           ),
         ],

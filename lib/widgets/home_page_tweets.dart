@@ -39,6 +39,7 @@ class HomePageTweets extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 14,
                         color: Color(0xFF6A6666),
+                        fontFamily: 'JannaLT',
                       ),
                     ),
                     const SizedBox(width: 50)

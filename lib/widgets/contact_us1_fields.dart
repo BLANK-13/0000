@@ -41,10 +41,10 @@ class ContactUsFields1 extends StatelessWidget {
                     Text(
                       fieldNames[index],
                       style: const TextStyle(
-                        color: mainColor,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+                          color: mainColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'JannaLT'),
                     ),
                   ],
                 ),
@@ -66,7 +66,11 @@ class ContactUsFields1 extends StatelessWidget {
                       height: 35,
                       child: Text(
                         errors[index],
-                        style: const TextStyle(color: Colors.red, fontSize: 13),
+                        style: const TextStyle(
+                          color: Colors.red,
+                          fontSize: 13,
+                          fontFamily: 'JannaLT',
+                        ),
                       ),
                     ),
                   ],

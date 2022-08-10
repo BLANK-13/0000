@@ -32,9 +32,7 @@ class ContactUsDone extends StatelessWidget {
           child: Text(
             "success".tr(),
             style: const TextStyle(
-              color: mainColor,
-              fontSize: 22,
-            ),
+                color: mainColor, fontSize: 22, fontFamily: 'JannaLT'),
           ),
         ),
         const SizedBox(
@@ -43,12 +41,14 @@ class ContactUsDone extends StatelessWidget {
         Center(
           child: Text(
             isAr ? 'رقم الطلب:' : 'Order number:',
-            style: const TextStyle(fontSize: 17, color: Color(0xFF707070)),
+            style: const TextStyle(
+                fontSize: 17, color: Color(0xFF707070), fontFamily: 'JannaLT'),
           ),
         ),
         Text(
           '$id',
-          style: const TextStyle(fontSize: 17, color: Color(0xFF707070)),
+          style: const TextStyle(
+              fontSize: 17, color: Color(0xFF707070), fontFamily: 'JannaLT'),
         ),
         const SizedBox(
           height: 20,

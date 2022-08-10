@@ -79,6 +79,7 @@ class MorePageOptions extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFFE0E0E0),
+                          fontFamily: 'JannaLT',
                         ),
                       ),
                     ),

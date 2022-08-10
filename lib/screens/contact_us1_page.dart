@@ -42,13 +42,13 @@ class ContactUs1Page extends StatelessWidget {
                 title: Center(
                     child: Text(
                   "data".tr(),
-                  style: const TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20, fontFamily: 'JannaLT'),
                 )),
               ),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Text(
                   "nextInfo".tr(),
-                  style: const TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 15, fontFamily: 'JannaLT'),
                 ),
               ]),
             ],
@@ -63,7 +63,10 @@ class ContactUs1Page extends StatelessWidget {
               children: const [
                 Text(
                   '1/2',
-                  style: TextStyle(fontSize: 13, color: Color(0xFF707070)),
+                  style: TextStyle(
+                      fontSize: 13,
+                      color: Color(0xFF707070),
+                      fontFamily: 'JannaLT'),
                 ),
                 SizedBox(
                   width: 15,
@@ -81,10 +84,10 @@ class ContactUs1Page extends StatelessWidget {
             Text(
               "contactUs".tr(),
               style: const TextStyle(
-                color: mainColor,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+                  color: mainColor,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'JannaLT'),
             ),
             const SizedBox(
               height: 20,

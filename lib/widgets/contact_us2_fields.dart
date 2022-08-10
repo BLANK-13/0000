@@ -37,10 +37,10 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
             Text(
               "title".tr(),
               style: const TextStyle(
-                color: mainColor,
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
+                  color: mainColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'JannaLT'),
             ),
           ],
         ),
@@ -61,7 +61,11 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
               ),
               Text(
                 ContactUsFields2.errors[0],
-                style: const TextStyle(color: Colors.red, fontSize: 13),
+                style: const TextStyle(
+                  color: Colors.red,
+                  fontSize: 13,
+                  fontFamily: 'JannaLT',
+                ),
               ),
             ],
           ),
@@ -77,6 +81,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                 color: mainColor,
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'JannaLT',
               ),
             ),
             //isAr ? const SizedBox(width: 250) : const SizedBox(width: 210),
@@ -110,6 +115,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 17,
+                                        fontFamily: 'JannaLT',
                                       ),
                                     ),
                                   ),
@@ -120,6 +126,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
+                                        fontFamily: 'JannaLT',
                                       ),
                                     ),
                                   ),
@@ -140,6 +147,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                               style: const TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 20,
+                                                fontFamily: 'JannaLT',
                                               ),
                                             ),
                                             shape: const RoundedRectangleBorder(
@@ -158,6 +166,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                               style: const TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 20,
+                                                fontFamily: 'JannaLT',
                                               ),
                                             ),
                                             shape: const RoundedRectangleBorder(
@@ -177,6 +186,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                               style: const TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 20,
+                                                fontFamily: 'JannaLT',
                                               ),
                                             ),
                                             shape: const RoundedRectangleBorder(
@@ -195,6 +205,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                               style: const TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 20,
+                                                fontFamily: 'JannaLT',
                                               ),
                                             ),
                                             shape: const RoundedRectangleBorder(
@@ -214,6 +225,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                               style: const TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 20,
+                                                fontFamily: 'JannaLT',
                                               ),
                                             ),
                                             shape: const RoundedRectangleBorder(
@@ -232,6 +244,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                               style: const TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 20,
+                                                fontFamily: 'JannaLT',
                                               ),
                                             ),
                                             shape: const RoundedRectangleBorder(
@@ -263,6 +276,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                                         color: Colors.white,
                                         fontWeight: FontWeight.w400,
                                         fontSize: 20,
+                                        fontFamily: 'JannaLT',
                                       ),
                                     ),
                                     style: ButtonStyle(
@@ -314,7 +328,11 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
               ),
               Text(
                 ContactUsFields2.errors[1],
-                style: const TextStyle(color: Colors.red, fontSize: 13),
+                style: const TextStyle(
+                  color: Colors.red,
+                  fontSize: 13,
+                  fontFamily: 'JannaLT',
+                ),
               ),
             ],
           ),
@@ -330,6 +348,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                 color: mainColor,
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'JannaLT',
               ),
             ),
           ],
@@ -351,7 +370,11 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
               ),
               Text(
                 ContactUsFields2.errors[2],
-                style: const TextStyle(color: Colors.red, fontSize: 13),
+                style: const TextStyle(
+                  color: Colors.red,
+                  fontSize: 13,
+                  fontFamily: 'JannaLT',
+                ),
               ),
             ],
           ),
@@ -367,6 +390,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                 color: mainColor,
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
+                fontFamily: 'JannaLT',
               ),
             ),
             const SizedBox(
@@ -375,9 +399,11 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
             Text(
               "optional".tr(),
               style: const TextStyle(
-                  fontSize: 10,
-                  color: Color(0xFF707070),
-                  fontWeight: FontWeight.bold),
+                fontSize: 10,
+                color: Color(0xFF707070),
+                fontWeight: FontWeight.bold,
+                fontFamily: 'JannaLT',
+              ),
             ),
           ],
         ),

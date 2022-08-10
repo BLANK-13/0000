@@ -65,6 +65,7 @@ class NewsListFeed extends StatelessWidget {
                               style: const TextStyle(
                                 fontSize: 16,
                                 color: Color(0xFF6A6666),
+                                fontFamily: 'JannaLT',
                               ),
                             ),
                             Flexible(
@@ -77,6 +78,7 @@ class NewsListFeed extends StatelessWidget {
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
+                                  fontFamily: 'JannaLT',
                                 ),
                               ),
                             ),
@@ -89,6 +91,7 @@ class NewsListFeed extends StatelessWidget {
                                 style: const TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFF7C7C7C),
+                                  fontFamily: 'JannaLT',
                                 ),
                               ),
                             ),

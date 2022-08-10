@@ -42,7 +42,10 @@ dev_dependencies:
 
 
 flutter:
-
+  fonts:
+    - family: JannaLT
+      fonts:
+        - asset: assets/fonts/JannaLT-Regular.ttf
 
   uses-material-design: true
 
@@ -58,9 +61,6 @@ flutter:
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
-fonts:
-    - family: JannaLT
-      fonts:
-        - asset: assets/fonts/JannaLT-Regular.ttf
+
 
   

@@ -60,9 +60,7 @@ class _HomePageState extends State<HomePage> {
                 leading: Text(
                   "lastNews".tr(),
                   style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
+                      fontSize: 16, color: Colors.black, fontFamily: 'JannaLT'),
                 ),
                 trailing: InkWell(
                   onTap: () {
@@ -74,9 +72,9 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "more".tr(),
                     style: const TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF0070AC),
-                    ),
+                        fontSize: 16,
+                        color: Color(0xFF0070AC),
+                        fontFamily: 'JannaLT'),
                   ),
                 ),
               ),
@@ -118,9 +116,7 @@ class _HomePageState extends State<HomePage> {
                 leading: Text(
                   "nextMatch".tr(),
                   style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
+                      fontSize: 16, color: Colors.black, fontFamily: 'JannaLT'),
                 ),
                 trailing: InkWell(
                   onTap: () => launchUrl(
@@ -128,9 +124,9 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     "more".tr(),
                     style: const TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF0070AC),
-                    ),
+                        fontSize: 16,
+                        color: Color(0xFF0070AC),
+                        fontFamily: 'JannaLT'),
                   ),
                 ),
               ),
@@ -147,9 +143,7 @@ class _HomePageState extends State<HomePage> {
                 leading: Text(
                   "latestTweets".tr(),
                   style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
+                      fontSize: 16, color: Colors.black, fontFamily: 'JannaLT'),
                 ),
                 trailing: InkWell(
                   onTap: () => launchUrl(Uri.parse('https://twitter.com/SPL')),
@@ -158,6 +152,7 @@ class _HomePageState extends State<HomePage> {
                     style: const TextStyle(
                       fontSize: 16,
                       color: Color(0xFF0070AC),
+                      fontFamily: 'JannaLT',
                     ),
                   ),
                 ),
@@ -172,9 +167,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "predict".tr(),
                   style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
+                      fontSize: 16, color: Colors.black, fontFamily: 'JannaLT'),
                 ),
               ]),
 
@@ -187,9 +180,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "videos".tr(),
                   style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
+                      fontSize: 16, color: Colors.black, fontFamily: 'JannaLT'),
                 ),
               ]),
               Container(
@@ -212,9 +203,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "sponsors".tr(),
                   style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.black,
-                  ),
+                      fontSize: 16, color: Colors.black, fontFamily: 'JannaLT'),
                 ),
               ]),
               const HomePageSponsors(),

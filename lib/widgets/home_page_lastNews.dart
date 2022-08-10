@@ -36,6 +36,7 @@ class HomePageLastNews extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 16,
                 color: Color(0xFF6A6666),
+                fontFamily: 'JannaLT',
               ),
             ),
           ],
@@ -48,6 +49,7 @@ class HomePageLastNews extends StatelessWidget {
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: Colors.black,
+              fontFamily: 'JannaLT',
             ),
           ),
         ),

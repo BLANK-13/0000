@@ -43,7 +43,8 @@ class ContactUs2Page extends StatelessWidget {
                       const SizedBox(width: 30),
                       Text(
                         "info".tr(),
-                        style: const TextStyle(fontSize: 20),
+                        style: const TextStyle(
+                            fontSize: 20, fontFamily: 'JannaLT'),
                       ),
                     ],
                   ),
@@ -51,7 +52,9 @@ class ContactUs2Page extends StatelessWidget {
                     child: Text(
                       "nextSend".tr(),
                       style: const TextStyle(
-                          fontSize: 15, color: Color(0xFF707070)),
+                          fontSize: 15,
+                          color: Color(0xFF707070),
+                          fontFamily: 'JannaLT'),
                     ),
                   ),
                 )
@@ -65,10 +68,10 @@ class ContactUs2Page extends StatelessWidget {
             Text(
               "contactUs".tr(),
               style: const TextStyle(
-                color: mainColor,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+                  color: mainColor,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'JannaLT'),
             ),
             const SizedBox(
               height: 40, //20 before

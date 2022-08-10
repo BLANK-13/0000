@@ -114,6 +114,7 @@ class ContactUsButton extends StatelessWidget {
           style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
+            fontFamily: 'JannaLT',
           ),
         ),
       ),
