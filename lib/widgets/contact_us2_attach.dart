@@ -12,7 +12,7 @@ class ContactUsAttach extends StatefulWidget {
 
 class _ContactUsAttachState extends State<ContactUsAttach> {
   bool _isSelected = false;
-  FilePicker? result;
+  static FilePickerResult? resultFinal;
   String fileName = '';
 
   void _pickFile() async {
@@ -26,10 +26,11 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
 
     // we will log the name, size and path of the
     // first picked file (if multiple are selected)
-    print(result.files.first.name);
-    print(result.files.first.size);
-    print(result.files.first.path);
     fileName = result.files.first.name.toString();
+    resultFinal = result;
+    setState(() {
+      _isSelected = true;
+    });
   }
 
   @override
@@ -43,7 +44,7 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
                 setState(() {
                   _isSelected = false;
                 });
-                result = null;
+                resultFinal = null;
               },
               style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -77,9 +78,6 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
           : ElevatedButton(
               onPressed: () {
                 _pickFile();
-                setState(() {
-                  _isSelected = true;
-                });
               },
               style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(

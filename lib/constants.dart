@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:trainee_task/models/contact_model.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 String getFormattedDate(String date) {
   return DateFormat('dd MMMM yyyy', translator.activeLanguageCode)
@@ -63,4 +66,21 @@ Widget _createTF(
       ),
     ),
   );
+}
+
+postData(ContactModel data) async {
+  var response = await http.post(
+      Uri.parse('https://615d4dea12571a001720752d.mockapi.io/contactus'),
+      body: {
+        "firstName": data.firstName,
+        "lastName": data.lastName,
+        "email": data.email,
+        "mobile": data.mobile,
+        "messageTitle": data.messageTitle,
+        "messageType": data.messageType,
+        "messageDesc": data.messageDesc,
+        "attachment": data.attachment,
+      });
+  Map postResponse = jsonDecode(response.body);
+  return postResponse['id'];
 }

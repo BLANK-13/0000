@@ -4,6 +4,7 @@ import 'package:trainee_task/screens/contact_us1_page.dart';
 import 'package:trainee_task/screens/contact_us_success.dart';
 
 import '../constants.dart';
+import '../models/contact_model.dart';
 import '../screens/contact_us2_page.dart';
 import '../widgets/contact_us1_fields.dart';
 import 'contact_us2_fields.dart';
@@ -73,13 +74,25 @@ class ContactUsButton extends StatelessWidget {
               }
               if (_isValid) {
                 int count = 0;
-                // Navigator.popUntil(context, (route) => false);
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ContactUsDone()),
-                  (route) => count++ >= 2,
+                var post = ContactModel(
+                  firstName: ContactUsFields1.textFields[0].text,
+                  lastName: ContactUsFields1.textFields[1].text,
+                  email: ContactUsFields1.textFields[2].text,
+                  mobile: ContactUsFields1.textFields[3].text,
+                  messageTitle: ContactUsFields2.textFields[0].text,
+                  messageType: ContactUsFields2.textFields[1].text,
+                  messageDesc: ContactUsFields2.textFields[2].text,
+                  attachment: 'null',
                 );
+
+                postData(post).then((value) => Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ContactUsDone(
+                                id: value,
+                              )),
+                      (route) => count++ >= 2,
+                    ));
               } else {
                 Navigator.pushReplacement(
                     context,

@@ -5,8 +5,8 @@ import 'package:trainee_task/constants.dart';
 import '../widgets/app_bar_image.dart';
 
 class ContactUsDone extends StatelessWidget {
-  const ContactUsDone({Key? key}) : super(key: key);
-  final int id = 12345;
+  const ContactUsDone({Key? key, required this.id}) : super(key: key);
+  final String? id;
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +28,10 @@ class ContactUsDone extends StatelessWidget {
         ),
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-         Center(
+        Center(
           child: Text(
             "success".tr(),
-            style: TextStyle(
+            style: const TextStyle(
               color: mainColor,
               fontSize: 22,
             ),
@@ -42,9 +42,13 @@ class ContactUsDone extends StatelessWidget {
         ),
         Center(
           child: Text(
-            isAr? 'رقم الطلب: $id': 'Order number: $id',
+            isAr ? 'رقم الطلب:' : 'Order number:',
             style: const TextStyle(fontSize: 17, color: Color(0xFF707070)),
           ),
+        ),
+        Text(
+          '$id',
+          style: const TextStyle(fontSize: 17, color: Color(0xFF707070)),
         ),
         const SizedBox(
           height: 20,

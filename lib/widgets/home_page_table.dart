@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
+import '../constants.dart';
 
 class HomePageTableWidget extends StatelessWidget {
   const HomePageTableWidget({Key? key}) : super(key: key);
@@ -21,14 +22,24 @@ class HomePageTableWidget extends StatelessWidget {
       leading: Image.asset(
           'assets/images/Hilal_logo.png'), // TODO assosiate Club name with logo here
       title: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          Text(
+            isAr ? 'الهلال' : 'Hilal',
+            style: const TextStyle(
+                fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
+          ),
           Text(
             hourFormat,
             style: const TextStyle(
               fontSize: 12,
               color: Colors.black,
             ),
+          ),
+          Text(
+            isAr ? 'الهلال' : 'Hilal',
+            style: const TextStyle(
+                fontSize: 15, color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ],
       ),
