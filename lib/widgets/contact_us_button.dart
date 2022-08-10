@@ -82,9 +82,9 @@ class ContactUsButton extends StatelessWidget {
                   messageTitle: ContactUsFields2.textFields[0].text,
                   messageType: ContactUsFields2.textFields[1].text,
                   messageDesc: ContactUsFields2.textFields[2].text,
-                  attachment: 'null',
+                  attachment: 'null', // TODO send the file to API
                 );
-                // need to change it to bloc
+                // TODO change it to bloc
                 postData(post).then((value) => Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
