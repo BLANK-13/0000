@@ -46,7 +46,7 @@ class ContactUsButton extends StatelessWidget {
                     ContactUsFields1.errors[2] = '';
               }
               //TODO remove this
-              if (_isValid || true) {
+              if (_isValid) {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
