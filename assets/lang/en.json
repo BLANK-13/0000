@@ -54,9 +54,12 @@
     "chooseType": "Choose",
     "complaint": "Complaint",
     "suggestion": "Suggestion",
-    "saudiLeague": "Saudi League"
-
-
-
+    "saudiLeague": "Saudi League",
+    "hilal": "Hilal",
+    "nassr": "Nassr",
+    "ahli": "Ahli",
+    "shabab": "Shabab",
+    "ettifaq": "Ettifaq",
+    "itihad": "Itihad"
 
 }

@@ -13,9 +13,16 @@ class ContactUs1Page extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: true,
         backgroundColor: const Color(0xFFF3F3F3),
         appBar: AppBar(
+          leading: InkWell(
+            child: const Icon(
+              Icons.clear,
+              color: Colors.black,
+            ),
+            onTap: () => Navigator.pop(context),
+          ),
           title: Column(
             children: [
               const SizedBox(

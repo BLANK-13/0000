@@ -54,10 +54,11 @@
     "chooseType": "اختر",
     "complaint": "شكوى",
     "suggestion": "اقتراح",
-    "saudiLeague": "الدوري السعودي"
-
-
-
-
-
+    "saudiLeague": "الدوري السعودي",
+    "hilal": "الهلال",
+    "nassr": "النصر",
+    "ahli": "الاهلي",
+    "shabab": "الشباب",
+    "ettifaq": "الاتفاق",
+    "itihad": "الاتحاد"
 }

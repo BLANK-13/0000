@@ -17,6 +17,13 @@ class ContactUs2Page extends StatelessWidget {
         resizeToAvoidBottomInset: false,
         backgroundColor: const Color(0xFFF3F3F3),
         appBar: AppBar(
+          leading: InkWell(
+            child: const Icon(
+              Icons.arrow_back_ios_rounded,
+              color: Colors.black,
+            ),
+            onTap: () => Navigator.pop(context),
+          ),
           title: Column(
             children: [
               const SizedBox(

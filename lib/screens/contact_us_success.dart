@@ -21,7 +21,7 @@ class ContactUsDone extends StatelessWidget {
         backgroundColor: const Color(0xFF0F1737),
         toolbarHeight: 100,
         centerTitle: true,
-        flexibleSpace: AppBarImage(img: 'assets/images/app_bar.jpg'),
+        flexibleSpace: AppBarImage(img: 'assets/images/app_bar.png'),
         leading: IconButton(
           icon: const Icon(Icons.close),
           onPressed: () => Navigator.pop(context),

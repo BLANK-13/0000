@@ -7,8 +7,7 @@ class AppBarImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(
-              opacity: 0.08, image: AssetImage(img), fit: BoxFit.fill)),
+          image: DecorationImage(image: AssetImage(img), fit: BoxFit.fill)),
     );
   }
 }

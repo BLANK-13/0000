@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
-import '../constants.dart';
-
 class HomePageTableWidget extends StatelessWidget {
-  const HomePageTableWidget({Key? key}) : super(key: key);
+  HomePageTableWidget(
+      {Key? key, required this.club_home, required this.club_away})
+      : super(key: key);
 
+  String club_home;
+  String club_away;
   String get hourFormat =>
       DateFormat.Hm().format(DateTime.parse("2021-07-23T13:20:05.891Z"));
   String get formatDateForTable =>
@@ -18,14 +20,14 @@ class HomePageTableWidget extends StatelessWidget {
       dense: true,
       tileColor: Colors.white,
       trailing: Image.asset(
-          'assets/images/Hilal_logo.png'), // TODO assosiate Club name with logo here
+          'assets/images/$club_away.png'), // TODO assosiate Club name with logo here
       leading: Image.asset(
-          'assets/images/Hilal_logo.png'), // TODO assosiate Club name with logo here
+          'assets/images/$club_home.png'), // TODO assosiate Club name with logo here
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            isAr ? 'الهلال' : 'Hilal',
+            club_home.tr(),
             style: const TextStyle(
               fontSize: 15,
               color: Colors.black,
@@ -42,7 +44,7 @@ class HomePageTableWidget extends StatelessWidget {
             ),
           ),
           Text(
-            isAr ? 'الهلال' : 'Hilal',
+            club_away.tr(),
             style: const TextStyle(
               fontSize: 15,
               color: Colors.black,

@@ -28,6 +28,9 @@ class MorePage extends StatelessWidget {
           Expanded(
             child: MorePageOptions(),
           ),
+          const SizedBox(
+            height: 20,
+          ),
           const MorePageSocials(),
           const SizedBox(
             height: 40,
@@ -43,7 +46,7 @@ class MorePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    isAr ? 'English' : 'العربي',
+                    isAr ? 'English' : 'العربي  ',
                     style: const TextStyle(
                       color: Colors.white,
                       fontFamily: 'JannaLT',

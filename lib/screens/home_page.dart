@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: mainColor,
             toolbarHeight: 100,
             centerTitle: true,
-            flexibleSpace: AppBarImage(img: 'assets/images/app_bar.jpg')),
+            flexibleSpace: AppBarImage(img: 'assets/images/app_bar.png')),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -131,11 +131,20 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 10),
-              const HomePageTableWidget(),
+              HomePageTableWidget(
+                club_home: 'hilal',
+                club_away: 'ahli',
+              ),
               const SizedBox(height: 1),
-              const HomePageTableWidget(),
+              HomePageTableWidget(
+                club_home: 'itihad',
+                club_away: 'shabab',
+              ),
               const SizedBox(height: 1),
-              const HomePageTableWidget(), //matches table
+              HomePageTableWidget(
+                club_home: 'ettifaq',
+                club_away: 'nassr',
+              ), //matches table
               const SizedBox(height: 30),
               ListTile(
                 dense: true,

@@ -81,6 +81,10 @@ postData(ContactModel data) async {
         "messageDesc": data.messageDesc,
         "attachment": data.attachment,
       });
-  Map postResponse = jsonDecode(response.body);
-  return postResponse['id'];
+  try {
+    Map postResponse = jsonDecode(response.body);
+    return postResponse['id'];
+  } catch (_) {
+    return isAr ? 'حدث خطأ مع رقم الطلب' : 'error with order number';
+  }
 }

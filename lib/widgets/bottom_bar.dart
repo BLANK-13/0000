@@ -30,24 +30,24 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-              icon: Image.asset('assets/images/home.png'),
+              icon: const Icon(Icons.home),
               backgroundColor: mainColor,
-              label: "more".tr()),
+              label: "home".tr()),
           BottomNavigationBarItem(
-            icon: Image.asset('assets/images/leader_board.png'),
+            icon: const Icon(Icons.storage_sharp),
             backgroundColor: mainColor,
             label: "scheadule".tr(),
           ),
           BottomNavigationBarItem(
-              icon: Image.asset('assets/images/news.png'),
+              icon: const Icon(Icons.fiber_new_rounded),
               backgroundColor: mainColor,
               label: "news".tr()),
           BottomNavigationBarItem(
-              icon: Image.asset('assets/images/stats.png'),
+              icon: const Icon(Icons.star_sharp),
               backgroundColor: mainColor,
               label: "stats".tr()),
           BottomNavigationBarItem(
-              icon: Image.asset('assets/images/more.png'),
+              icon: const Icon(Icons.more_horiz),
               backgroundColor: mainColor,
               label: "more".tr())
         ],
