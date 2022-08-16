@@ -50,9 +50,12 @@ class HomePageTweets extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 10),
-        const Text(
-          'عندما يريد العالم أن يتكلّم  ، فهو يتحدّث بلغة يونيكود. تسجّل الآن لحضور المؤتمر الدولي العاشر ليونيكود (Unicode Conference)، الذي سيعقد في 10-12 آذار 1997 بمدينة مَايِنْتْس، ألمانيا. ',
-          style: TextStyle(
+        Text(
+          isAr
+              ? 'عندما يريد العالم أن يتكلّم  ، فهو يتحدّث بلغة يونيكود. تسجّل الآن لحضور المؤتمر الدولي العاشر ليونيكود (Unicode Conference)، الذي سيعقد في 10-12 آذار 1997 بمدينة مَايِنْتْس، ألمانيا. '
+              : '"When the world wants to talk, it speaks Unicode. Register now to attend the Tenth International Unicode Conference, which will be held on 10-12 March 1997 in Mainz, Germany. The conference will bring together experts from all sectors of the industry on the Internet and Unicode, where both international and local will discuss ways to use Unicode in existing systems and in terms of computer applications, fonts, text design and multilingual computing when the world wants to speak It speaks Unicode. Register now to attend the Tenth International Unicode Conference, which will be held on 10-12 March 1997 in Mainz, Germany.',
+          maxLines: 3,
+          style: const TextStyle(
             fontSize: 13,
             fontFamily: 'JannaLT',
           ),

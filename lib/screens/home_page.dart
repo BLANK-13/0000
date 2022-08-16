@@ -167,9 +167,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 10),
-              const SizedBox(height: 210, child: HomePageTweets()),
+              const SizedBox(height: 180, child: HomePageTweets()),
               const SizedBox(height: 1),
-              const SizedBox(height: 210, child: HomePageTweets()),
+              const SizedBox(height: 180, child: HomePageTweets()),
               const SizedBox(height: 30),
               Row(children: [
                 const SizedBox(width: 10),

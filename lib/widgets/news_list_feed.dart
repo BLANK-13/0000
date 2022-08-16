@@ -34,21 +34,33 @@ class NewsListFeed extends StatelessWidget {
                     ),
                   ),
                 ),
-                child: Container(
+                child: SizedBox(
                   height: 120,
-                  padding: const EdgeInsets.all(5),
                   child: Row(
                     children: [
                       Expanded(
                         flex: 6,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(4),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: NetworkImage(news[index].image),
-                                  fit: BoxFit.fill),
-                            ),
+                          borderRadius: BorderRadius.circular(5),
+                          child: Stack(
+                            alignment: isAr
+                                ? AlignmentDirectional.bottomStart
+                                : AlignmentDirectional.bottomEnd,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: NetworkImage(news[index].image),
+                                      fit: BoxFit.fill),
+                                ),
+                              ),
+                              Image.asset('assets/images/feed_logo_holder.png'),
+                              Positioned(
+                                  bottom: 5,
+                                  right: 8,
+                                  child: Image.asset(
+                                      'assets/images/feed_logo.png'))
+                            ],
                           ),
                         ),
                       ),
@@ -56,7 +68,7 @@ class NewsListFeed extends StatelessWidget {
                         flex: 1,
                       ),
                       Expanded(
-                        flex: 14,
+                        flex: 11,
                         child: Container(
                           padding: isAr
                               ? const EdgeInsets.only(top: 0)
@@ -75,23 +87,20 @@ class NewsListFeed extends StatelessWidget {
                               ),
                               Flexible(
                                 flex: 3,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    isAr
-                                        ? news[index].titleAr
-                                        : news[index].titleEn,
-                                    maxLines: 2,
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                      fontFamily: 'JannaLT',
-                                    ),
+                                child: Text(
+                                  isAr
+                                      ? news[index].titleAr
+                                      : news[index].titleEn,
+                                  maxLines: 2,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    fontFamily: 'JannaLT',
                                   ),
                                 ),
                               ),
-                              const SizedBox(), // was 20 for EN and empty for AR
+                              // was 20 for EN and empty for AR
                               Expanded(
                                 child: Text(
                                   getFormattedDate(news[index].createdAt),

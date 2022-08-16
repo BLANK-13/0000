@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:localize_and_translate/localize_and_translate.dart';
 
 class HomePagePoll extends StatelessWidget {
   const HomePagePoll({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +23,7 @@ class HomePagePoll extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(color: const Color(0xFFD1D1D1))),
-                  child: Image.asset('assets/images/Hilal_logo.png'),
+                  child: Image.asset('assets/images/Itihad_logo.png'),
                 ),
               ),
               Flexible(
@@ -47,17 +47,17 @@ class HomePagePoll extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       border: Border.all(color: const Color(0xFFD1D1D1))),
-                  child: Image.asset('assets/images/Hilal_logo.png'),
+                  child: Image.asset('assets/images/Nassr_logo.png'),
                 ),
               ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
+            children: [
               Text(
-                "الهلال",
-                style: TextStyle(
+                "itihad".tr(),
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -65,8 +65,8 @@ class HomePagePoll extends StatelessWidget {
                 ),
               ),
               Text(
-                "الهلال",
-                style: TextStyle(
+                "hilal".tr(),
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -74,8 +74,8 @@ class HomePagePoll extends StatelessWidget {
                 ),
               ),
               Text(
-                "الهلال",
-                style: TextStyle(
+                "nassr".tr(),
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -99,7 +99,7 @@ class HomePagePoll extends StatelessWidget {
                 ),
               ),
               Text(
-                ' %30',
+                ' %50',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xFF7C7C7C),
@@ -107,7 +107,7 @@ class HomePagePoll extends StatelessWidget {
                 ),
               ),
               Text(
-                ' %30',
+                ' %20',
                 style: TextStyle(
                   fontSize: 14,
                   color: Color(0xFF7C7C7C),

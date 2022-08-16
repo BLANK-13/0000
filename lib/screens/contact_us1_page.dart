@@ -13,7 +13,7 @@ class ContactUs1Page extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: false,
         backgroundColor: const Color(0xFFF3F3F3),
         appBar: AppBar(
           leading: InkWell(
@@ -104,9 +104,7 @@ class ContactUs1Page extends StatelessWidget {
               btnText: "next".tr(),
               ContactStep: 1,
             ),
-            const SizedBox(
-              height: 55,
-            )
+            const SizedBox(height: 25) // was 55
           ],
         ),
       ),

@@ -357,7 +357,8 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
           children: [
             Flexible(
               child: _createTF(
-                  context, "write".tr(), ContactUsFields2.textFields[2]),
+                  context, "write".tr(), ContactUsFields2.textFields[2],
+                  lines: 4),
             ),
           ],
         ),
@@ -411,15 +412,12 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
     );
   }
 
-  Widget _createTF(
-    context,
-    String lable,
-    var controller,
-  ) {
+  Widget _createTF(context, String lable, var controller, {int? lines = 1}) {
     return Container(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: TextField(
+          maxLines: lines,
           style: const TextStyle(
             color: mainColor,
             fontSize: 15,

@@ -56,6 +56,7 @@ class ContactUsFields1 extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -83,24 +84,22 @@ class ContactUsFields1 extends StatelessWidget {
 
   Widget _createTF(
     context,
-    String lable,
+    String hint,
     var controller,
   ) {
-    return Container(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
-        child: TextField(
-          style: const TextStyle(
-            color: mainColor,
-            fontSize: 15,
-          ),
-          controller: controller,
-          decoration: InputDecoration(
-            fillColor: Colors.transparent,
-            hintText: lable,
-          ),
-          cursorColor: Theme.of(context).primaryColor,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: TextField(
+        style: const TextStyle(
+          color: mainColor,
+          fontSize: 15,
         ),
+        controller: controller,
+        decoration: InputDecoration(
+          fillColor: Colors.transparent,
+          hintText: hint,
+        ),
+        cursorColor: Theme.of(context).primaryColor,
       ),
     );
   }

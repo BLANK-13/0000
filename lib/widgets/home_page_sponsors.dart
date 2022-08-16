@@ -28,7 +28,7 @@ class HomePageSponsors extends StatelessWidget {
           ),
           InkWell(
             onTap: () => launchUrl(Uri.parse('https://spl.sa/')),
-            child: Image.asset('assets/images/spons2.png'),
+            child: Image.asset('assets/images/spons3.png'),
           ),
         ],
       ),
