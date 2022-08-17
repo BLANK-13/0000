@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:trainee_task/widgets/contact_us2_attach.dart';
 
 import '../constants.dart';
 import '../widgets/contact_us2_fields.dart';
@@ -59,7 +58,7 @@ class ContactUs2Page extends StatelessWidget {
                     child: Column(
                       children: [
                         const Text(
-                          '2/2',
+                          '\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2/2', // fix this
                           style:
                               TextStyle(fontSize: 13, color: Color(0xFF707070)),
                         ),
@@ -93,15 +92,12 @@ class ContactUs2Page extends StatelessWidget {
               height: 40, //20 before
             ),
             const Flexible(child: ContactUsFields2()),
-            Column(
-              children: const [ContactUsAttach()],
-            ),
-            isAr ? const SizedBox(height: 55) : const SizedBox(height: 80),
+            const SizedBox(height: 20),
             ContactUsButton(
               btnText: "send".tr(),
               ContactStep: 2,
             ),
-            const SizedBox(height: 20) //was 40
+            const SizedBox(height: 30)
           ],
         ),
       ),

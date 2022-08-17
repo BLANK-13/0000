@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../constants.dart';
+import 'contact_us2_attach.dart';
 
 class ContactUsFields2 extends StatefulWidget {
   const ContactUsFields2({Key? key}) : super(key: key);
@@ -405,6 +406,15 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                 fontWeight: FontWeight.bold,
                 fontFamily: 'JannaLT',
               ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Flexible(
+              child: ContactUsAttach(),
             ),
           ],
         ),

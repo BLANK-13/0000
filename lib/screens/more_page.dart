@@ -16,7 +16,7 @@ class MorePage extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(
-            height: 37,
+            height: 90,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -58,7 +58,7 @@ class MorePage extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 10)
+          const SizedBox(height: 30)
         ],
       ),
     );

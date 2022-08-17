@@ -28,6 +28,8 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        selectedLabelStyle: const TextStyle(fontFamily: 'JannaLt'),
+        unselectedLabelStyle: const TextStyle(fontFamily: 'JannaLt'),
         items: [
           BottomNavigationBarItem(
               icon: const Icon(Icons.home),

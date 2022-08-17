@@ -167,9 +167,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 10),
-              const SizedBox(height: 180, child: HomePageTweets()),
+              const SizedBox(height: 175, child: HomePageTweets()),
               const SizedBox(height: 1),
-              const SizedBox(height: 180, child: HomePageTweets()),
+              const SizedBox(height: 175, child: HomePageTweets()),
               const SizedBox(height: 30),
               Row(children: [
                 const SizedBox(width: 10),
@@ -193,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ]),
               Container(
-                height: 220,
+                height: 255,
                 width: double.infinity,
                 color: Colors.white,
                 child: Center(
@@ -201,9 +201,16 @@ class _HomePageState extends State<HomePage> {
                     margin: const EdgeInsets.all(20),
                     width: 343,
                     height: 195,
-                    child: HomePageVideo(),
+                    child: const HomePageVideo(
+                      thumbnail:
+                          'https://dev.spl.sa/sites/default/files/2021-10/2523466-2120294578.jpg',
+                      videoLink:
+                          'https://www.youtube.com/watch?v=mhKTNCsXGZE&t=1s&ab_channel=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D9%84%D9%84%D9%85%D8%AD%D8%AA%D8%B1%D9%81%D9%8A%D9%86-SaudiProLeague',
+                      headLineAr: 'الصحف العالمية تبرر تمديد عقد',
+                      headLineEn: 'News Explain Extending Contracts',
+                    ),
                   ),
-                ), //NewsPageVideo(), <- see the problem of the youtube player.
+                ),
               ),
 
               const SizedBox(height: 30),
