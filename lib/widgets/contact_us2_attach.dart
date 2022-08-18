@@ -44,6 +44,7 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
                 setState(() {
                   _isSelected = false;
                 });
+                print('$resultFinal hhahahaha');
                 resultFinal = null;
               },
               style: ButtonStyle(
@@ -56,8 +57,12 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
                 elevation: MaterialStateProperty.all<double>(0.0),
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  const Icon(
+                    Icons.copy,
+                    color: mainColor,
+                  ),
                   Text(
                     fileName,
                     style: const TextStyle(

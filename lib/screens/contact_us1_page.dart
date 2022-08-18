@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../constants.dart';
-import '../widgets/contact_us_button.dart';
 import '../widgets/contact_us1_fields.dart';
 
 class ContactUs1Page extends StatelessWidget {
@@ -13,7 +12,7 @@ class ContactUs1Page extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: true,
         backgroundColor: const Color(0xFFF3F3F3),
         appBar: AppBar(
           leading: InkWell(
@@ -100,11 +99,6 @@ class ContactUs1Page extends StatelessWidget {
               height: 20,
             ),
             Flexible(child: ContactUsFields1()),
-            ContactUsButton(
-              btnText: "next".tr(),
-              ContactStep: 1,
-            ),
-            const SizedBox(height: 25) // was 55
           ],
         ),
       ),

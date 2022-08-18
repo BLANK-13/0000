@@ -3,7 +3,6 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../constants.dart';
 import '../widgets/contact_us2_fields.dart';
-import '../widgets/contact_us_button.dart';
 
 class ContactUs2Page extends StatelessWidget {
   const ContactUs2Page({Key? key}) : super(key: key);
@@ -13,7 +12,7 @@ class ContactUs2Page extends StatelessWidget {
     return DefaultTabController(
       length: 1,
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: true,
         backgroundColor: const Color(0xFFF3F3F3),
         appBar: AppBar(
           leading: InkWell(
@@ -92,12 +91,6 @@ class ContactUs2Page extends StatelessWidget {
               height: 40, //20 before
             ),
             const Flexible(child: ContactUsFields2()),
-            const SizedBox(height: 20),
-            ContactUsButton(
-              btnText: "send".tr(),
-              ContactStep: 2,
-            ),
-            const SizedBox(height: 30)
           ],
         ),
       ),

@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../constants.dart';
+import 'contact_us_button.dart';
 
 class ContactUsFields1 extends StatelessWidget {
   ContactUsFields1({Key? key}) : super(key: key);
-  final List<String> fields = [
+  final List<String> fieldHints = [
     "enterFirstName".tr(),
     "enterLastName".tr(),
     'example@example.com',
@@ -51,8 +52,8 @@ class ContactUsFields1 extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                      child:
-                          _createTF(context, fields[index], textFields[index]),
+                      child: _createTF(
+                          context, fieldHints[index], textFields[index]),
                     ),
                   ],
                 ),
@@ -76,6 +77,19 @@ class ContactUsFields1 extends StatelessWidget {
                     ),
                   ],
                 ),
+                index == 3
+                    ? Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Flexible(
+                            child: ContactUsButton(
+                              btnText: "next".tr(),
+                              ContactStep: 1,
+                            ),
+                          ),
+                        ],
+                      )
+                    : const SizedBox()
               ],
             ),
           );
