@@ -5,15 +5,15 @@ import 'package:trainee_task/constants.dart';
 
 class ContactUsAttach extends StatefulWidget {
   const ContactUsAttach({Key? key}) : super(key: key);
-
+  static String? resultFinal;
   @override
   State<ContactUsAttach> createState() => _ContactUsAttachState();
 }
 
 class _ContactUsAttachState extends State<ContactUsAttach> {
   bool _isSelected = false;
-  static FilePickerResult? resultFinal;
-  String fileName = '';
+
+  static String fileName = '';
 
   void _pickFile() async {
     // opens storage to pick files and the picked file or files
@@ -27,7 +27,7 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
     // we will log the name, size and path of the
     // first picked file (if multiple are selected)
     fileName = result.files.first.name.toString();
-    resultFinal = result;
+    ContactUsAttach.resultFinal = fileName;
     setState(() {
       _isSelected = true;
     });
@@ -44,8 +44,6 @@ class _ContactUsAttachState extends State<ContactUsAttach> {
                 setState(() {
                   _isSelected = false;
                 });
-                print('$resultFinal hhahahaha');
-                resultFinal = null;
               },
               style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(

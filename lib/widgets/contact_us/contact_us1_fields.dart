@@ -128,11 +128,11 @@ class _ContactUsFields1State extends State<ContactUsFields1> {
         ),
         controller: controller,
         decoration: InputDecoration(
-          fillColor: mainColor,
+          fillColor: Colors.transparent,
           hintText: hint,
           enabledBorder: UnderlineInputBorder(
             borderSide: correct
-                ? const BorderSide(color: mainColor)
+                ? const BorderSide(color: Color(0xFFE6E6E6))
                 : const BorderSide(color: Colors.red),
           ),
         ),

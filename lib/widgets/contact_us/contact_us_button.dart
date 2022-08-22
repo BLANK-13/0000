@@ -6,6 +6,7 @@ import '../../constants.dart';
 import '../../models/contact_model.dart';
 import '../../screens/contact_us2_page.dart';
 import 'contact_us1_fields.dart';
+import 'contact_us2_attach.dart';
 import 'contact_us2_fields.dart';
 
 class ContactUsButton extends StatelessWidget {
@@ -87,7 +88,8 @@ class ContactUsButton extends StatelessWidget {
                   messageTitle: ContactUsFields2.textFields[0].text,
                   messageType: ContactUsFields2.textFields[1].text,
                   messageDesc: ContactUsFields2.textFields[2].text,
-                  attachment: '', // TODO send the file to API
+                  attachment:
+                      ContactUsAttach.resultFinal, // TODO send the file to API
                 );
                 // TODO change it to bloc
                 postData(post).then((value) => Navigator.pushAndRemoveUntil(

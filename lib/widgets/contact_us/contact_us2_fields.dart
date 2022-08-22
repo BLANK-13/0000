@@ -46,14 +46,24 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
             ),
           ],
         ),
-        Row(
-          children: [
-            Flexible(
-              child: _createTF(
-                  context, "inquiry".tr(), ContactUsFields2.textFields[0]),
-            ),
-          ],
-        ),
+        ContactUsFields2.errors[0] == ''
+            ? Row(
+                children: [
+                  Flexible(
+                    child: _createTF(context, "inquiry".tr(),
+                        ContactUsFields2.textFields[0]),
+                  ),
+                ],
+              )
+            : Row(
+                children: [
+                  Flexible(
+                    child: _createTF(
+                        context, "inquiry".tr(), ContactUsFields2.textFields[0],
+                        correct: false),
+                  ),
+                ],
+              ),
         SizedBox(
           height: 35,
           child: Row(
@@ -108,6 +118,11 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
                 ),
                 fillColor: Colors.transparent,
                 hintText: "inquiry".tr(),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: ContactUsFields2.errors[1] == ''
+                      ? const BorderSide(color: Color(0xFFE6E6E6))
+                      : const BorderSide(color: Colors.red),
+                ),
               ),
               cursorColor: Theme.of(context).primaryColor,
             ),
@@ -147,15 +162,25 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
             ),
           ],
         ),
-        Row(
-          children: [
-            Flexible(
-              child: _createTF(
-                  context, "write".tr(), ContactUsFields2.textFields[2],
-                  lines: 4),
-            ),
-          ],
-        ),
+        ContactUsFields2.errors[2] == ''
+            ? Row(
+                children: [
+                  Flexible(
+                    child: _createTF(
+                        context, "write".tr(), ContactUsFields2.textFields[2],
+                        lines: 4),
+                  ),
+                ],
+              )
+            : Row(
+                children: [
+                  Flexible(
+                    child: _createTF(
+                        context, "write".tr(), ContactUsFields2.textFields[2],
+                        lines: 4, correct: false),
+                  ),
+                ],
+              ),
         SizedBox(
           height: 25,
           child: Row(
@@ -450,7 +475,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
             hintText: hint,
             enabledBorder: UnderlineInputBorder(
               borderSide: correct
-                  ? const BorderSide(color: mainColor)
+                  ? const BorderSide(color: Color(0xFFE6E6E6))
                   : const BorderSide(color: Colors.red),
             ),
           ),
