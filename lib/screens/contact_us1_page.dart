@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../constants.dart';
-import '../widgets/contact_us1_fields.dart';
+import '../widgets/contact_us/contact_us1_fields.dart';
 
 class ContactUs1Page extends StatelessWidget {
   const ContactUs1Page({Key? key}) : super(key: key);
@@ -45,16 +45,21 @@ class ContactUs1Page extends StatelessWidget {
               ListTile(
                 dense: true,
                 visualDensity: const VisualDensity(vertical: -4),
-                title: Center(
-                    child: Text(
+                title: Text(
                   "data".tr(),
-                  style: const TextStyle(fontSize: 20, fontFamily: 'JannaLT'),
-                )),
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'JannaLT',
+                      fontWeight: FontWeight.bold),
+                ),
               ),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Text(
                   "nextInfo".tr(),
-                  style: const TextStyle(fontSize: 15, fontFamily: 'JannaLT'),
+                  style: const TextStyle(
+                      fontSize: 15,
+                      fontFamily: 'JannaLT',
+                      fontWeight: FontWeight.bold),
                 ),
               ]),
             ],

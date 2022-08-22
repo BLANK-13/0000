@@ -12,10 +12,10 @@ class NewsRepository {
 
   Future<NewsModelResponse> getContent(int n) async {
     try {
-     final headers = {
-    'Content-Type': 'application/json; charset=UTF-8',
-    'accept': 'application/json; charset=UTF-8',
-  };
+      final headers = {
+        'Content-Type': 'application/json; charset=UTF-8',
+        'accept': 'application/json; charset=UTF-8',
+      };
       final url = mainUrl.replaceAll('{n}', n.toString());
       final response = await client.get(getUri(url), headers: headers);
       print(response.body);

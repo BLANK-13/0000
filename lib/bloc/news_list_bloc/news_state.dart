@@ -21,10 +21,17 @@ class NewsFailure extends NewsState {
 }
 
 class NewsSuccess extends NewsState {
-  final List<NewsModel> news;
+  final List<NewsModel> newsP1;
+  final List<NewsModel> newsP2;
+  final List<NewsModel> newsP3;
+  final List<NewsModel> newsP4;
+  final List<NewsModel> newsP5;
+  final List<NewsModel> newsP6;
+  final List<NewsModel> newsP7;
 
-  NewsSuccess(this.news);
+  const NewsSuccess(this.newsP1, this.newsP2, this.newsP3, this.newsP4,
+      this.newsP5, this.newsP6, this.newsP7);
 
   @override
-  List<Object> get props => [news];
+  List<Object> get props => [newsP1];
 }

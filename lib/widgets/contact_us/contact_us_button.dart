@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:trainee_task/screens/contact_us1_page.dart';
 import 'package:trainee_task/screens/contact_us_success.dart';
 
-import '../constants.dart';
-import '../models/contact_model.dart';
-import '../screens/contact_us2_page.dart';
-import '../widgets/contact_us1_fields.dart';
+import '../../constants.dart';
+import '../../models/contact_model.dart';
+import '../../screens/contact_us2_page.dart';
+import 'contact_us1_fields.dart';
 import 'contact_us2_fields.dart';
 
 class ContactUsButton extends StatelessWidget {
-  ContactUsButton({Key? key, required this.btnText, required this.ContactStep})
+  ContactUsButton(
+      {Key? key,
+      required this.btnText,
+      required this.ContactStep,
+      required this.callBack})
       : super(key: key);
   int ContactStep;
   String btnText;
   bool _isValid = false;
+  VoidCallback callBack;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -47,15 +51,16 @@ class ContactUsButton extends StatelessWidget {
               }
 
               if (_isValid) {
+                ContactUsFields1.errors[0] = ContactUsFields1.errors[1] =
+                    ContactUsFields1.errors[2] =
+                        ContactUsFields1.errors[3] = '';
+                callBack();
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ContactUs2Page()));
               } else {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContactUs1Page()));
+                callBack();
               }
               break;
             case 2:
@@ -70,7 +75,7 @@ class ContactUsButton extends StatelessWidget {
               } else if (ContactUsFields2.textFields[2].text.isEmpty) {
                 _isValid = false;
                 ContactUsFields2.errors[2] = "messageCheck".tr();
-                ContactUsFields2.errors[0] = ContactUsFields1.errors[1] = '';
+                ContactUsFields2.errors[0] = ContactUsFields2.errors[1] = '';
               }
               if (_isValid) {
                 int count = 0;
@@ -94,10 +99,7 @@ class ContactUsButton extends StatelessWidget {
                       (route) => count++ >= 2,
                     ));
               } else {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContactUs2Page()));
+                callBack();
               }
               break;
           }

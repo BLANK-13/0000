@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class HomePageTweets extends StatelessWidget {
   const HomePageTweets({Key? key}) : super(key: key);
@@ -52,8 +52,8 @@ class HomePageTweets extends StatelessWidget {
         ),
         Padding(
           padding: isAr
-              ? const EdgeInsets.fromLTRB(0, 0, 15, 0)
-              : const EdgeInsets.fromLTRB(15, 0, 0, 0),
+              ? const EdgeInsets.only(right: 15)
+              : const EdgeInsets.only(left: 15),
           child: Text(
             isAr
                 ? 'عندما يريد العالم أن يتكلّم  ، فهو يتحدّث بلغة يونيكود. تسجّل الآن لحضور المؤتمر الدولي العاشر ليونيكود (Unicode Conference)، الذي سيعقد في 10-12 آذار 1997 بمدينة مَايِنْتْس، ألمانيا. '

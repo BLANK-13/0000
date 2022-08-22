@@ -13,7 +13,4 @@ class NewsModelResponse {
   NewsModelResponse.withError(String errorValue)
       : news = [],
         error = errorValue;
-
-  /// for now ???
-
 }

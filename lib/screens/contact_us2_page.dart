@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../constants.dart';
-import '../widgets/contact_us2_fields.dart';
+import '../widgets/contact_us/contact_us2_fields.dart';
 
 class ContactUs2Page extends StatelessWidget {
   const ContactUs2Page({Key? key}) : super(key: key);
@@ -42,34 +42,44 @@ class ContactUs2Page extends StatelessWidget {
               labelColor: mainColor,
               indicatorColor: mainColor,
               tabs: [
-                ListTile(
-                  title: Row(
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 4),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(width: 30),
                       Text(
                         "info".tr(),
                         style: const TextStyle(
-                            fontSize: 20, fontFamily: 'JannaLT'),
+                            fontSize: 20,
+                            fontFamily: 'JannaLT',
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: const [
+                              SizedBox(width: 55),
+                              Text(
+                                '2/2', // fix this
+                                style: TextStyle(
+                                    fontSize: 13, color: Color(0xFF707070)),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 8.0),
+                            child: Text(
+                              "nextSend".tr(),
+                              style: const TextStyle(
+                                  fontSize: 15,
+                                  color: Color(0xFF707070),
+                                  fontFamily: 'JannaLT',
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
-                  ),
-                  trailing: Expanded(
-                    child: Column(
-                      children: [
-                        const Text(
-                          '\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2/2', // fix this
-                          style:
-                              TextStyle(fontSize: 13, color: Color(0xFF707070)),
-                        ),
-                        Text(
-                          "nextSend".tr(),
-                          style: const TextStyle(
-                              fontSize: 15,
-                              color: Color(0xFF707070),
-                              fontFamily: 'JannaLT'),
-                        ),
-                      ],
-                    ),
                   ),
                 )
               ]),
@@ -88,7 +98,7 @@ class ContactUs2Page extends StatelessWidget {
                   fontFamily: 'JannaLT'),
             ),
             const SizedBox(
-              height: 40, //20 before
+              height: 10,
             ),
             const Flexible(child: ContactUsFields2()),
           ],

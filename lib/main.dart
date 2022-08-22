@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:trainee_task/widgets/bottom_bar.dart';
+import 'package:trainee_task/screens/splash_page.dart';
 
 import 'constants.dart';
 
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primaryColor: mainColor),
       debugShowCheckedModeBanner: false,
-      home: const BottomBarWidget(),
+      home: const SplashPage(),
 
       localizationsDelegates: translator.delegates, // Android + iOS Delegates
       locale: translator.activeLocale, // Active locale

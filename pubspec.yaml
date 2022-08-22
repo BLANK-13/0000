@@ -25,12 +25,10 @@ dependencies:
   url_launcher: ^6.1.5
   localize_and_translate: any
   intl: ^0.17.0
-  tweet_ui: ^4.0.2
-  flutter_polls: any
-  youtube_player_flutter: ^8.0.0
   open_file: ^3.2.1
   file_picker: ^4.6.1
   flutter_bloc: ^8.0.1
+
   
 
 

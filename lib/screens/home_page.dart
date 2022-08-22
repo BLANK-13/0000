@@ -4,16 +4,16 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:trainee_task/bloc/home_news_bloc/home_news_bloc.dart';
 import 'package:trainee_task/repo/repository.dart';
 import 'package:trainee_task/widgets/app_bar_image.dart';
-import 'package:trainee_task/widgets/home_page_video.dart';
+import 'package:trainee_task/widgets/home_page/home_page_video.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 
 import '../constants.dart';
-import '../widgets/home_page_lastNews.dart';
-import '../widgets/home_page_poll.dart';
-import '../widgets/home_page_sponsors.dart';
-import '../widgets/home_page_table.dart';
-import '../widgets/home_page_tweets.dart';
+import '../widgets/home_page/home_page_lastNews.dart';
+import '../widgets/home_page/home_page_poll.dart';
+import '../widgets/home_page/home_page_sponsors.dart';
+import '../widgets/home_page/home_page_table.dart';
+import '../widgets/home_page/home_page_tweets.dart';
 import 'news_list_page.dart';
 
 class HomePage extends StatefulWidget {

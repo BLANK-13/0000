@@ -4,13 +4,13 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:trainee_task/bloc/news_list_bloc/news_bloc.dart';
 
 import 'package:trainee_task/repo/repository.dart';
-import 'package:trainee_task/widgets/news_list_media.dart';
+import 'package:trainee_task/widgets/news_page/news_list_media.dart';
 import 'package:http/http.dart' as http;
 
 import '../constants.dart';
 import '../widgets/app_bar_image.dart';
-import '../widgets/news_list_feed.dart';
-import '../widgets/news_list_media.dart';
+import '../widgets/news_page/news_list_feed.dart';
+import '../widgets/news_page/news_list_media.dart';
 
 class NewsListPage extends StatefulWidget {
   // final NewsModel newsList;, required this.newsList
@@ -77,7 +77,17 @@ class _NewsListPageState extends State<NewsListPage> {
                       ],
                     );
                   } else if (state is NewsSuccess) {
-                    return NewsListFeed(news: state.news);
+                    return ListView(
+                      children: [
+                        Flexible(child: NewsListFeed(news: state.newsP1)),
+                        Flexible(child: NewsListFeed(news: state.newsP2)),
+                        Flexible(child: NewsListFeed(news: state.newsP3)),
+                        Flexible(child: NewsListFeed(news: state.newsP4)),
+                        Flexible(child: NewsListFeed(news: state.newsP5)),
+                        Flexible(child: NewsListFeed(news: state.newsP6)),
+                        Flexible(child: NewsListFeed(news: state.newsP7)),
+                      ],
+                    );
                   }
                   return const SizedBox();
                 },

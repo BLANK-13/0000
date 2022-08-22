@@ -1,23 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 import 'contact_us_button.dart';
 
-class ContactUsFields1 extends StatelessWidget {
-  ContactUsFields1({Key? key}) : super(key: key);
-  final List<String> fieldHints = [
-    "enterFirstName".tr(),
-    "enterLastName".tr(),
-    'example@example.com',
-    '05XXXXXXXXX'
-  ];
-  final List<String> fieldNames = [
-    "firstName".tr(),
-    "lastName".tr(),
-    "email".tr(),
-    "phone".tr(),
-  ];
+class ContactUsFields1 extends StatefulWidget {
+  const ContactUsFields1({Key? key}) : super(key: key);
   static List<TextEditingController> textFields = [
     TextEditingController(),
     TextEditingController(),
@@ -25,6 +13,25 @@ class ContactUsFields1 extends StatelessWidget {
     TextEditingController()
   ];
   static List<String> errors = ['', '', '', ''];
+
+  @override
+  State<ContactUsFields1> createState() => _ContactUsFields1State();
+}
+
+class _ContactUsFields1State extends State<ContactUsFields1> {
+  final List<String> fieldHints = [
+    "enterFirstName".tr(),
+    "enterLastName".tr(),
+    'example@example.com',
+    '05XXXXXXXXX'
+  ];
+
+  final List<String> fieldNames = [
+    "firstName".tr(),
+    "lastName".tr(),
+    "email".tr(),
+    "phone".tr(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -49,14 +56,27 @@ class ContactUsFields1 extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    Flexible(
-                      child: _createTF(
-                          context, fieldHints[index], textFields[index]),
-                    ),
-                  ],
-                ),
+                ContactUsFields1.errors[index] == ''
+                    ? Row(
+                        children: [
+                          Flexible(
+                            child: _createTF(
+                              context,
+                              fieldHints[index],
+                              ContactUsFields1.textFields[index],
+                            ),
+                          ),
+                        ],
+                      )
+                    : Row(
+                        children: [
+                          Flexible(
+                            child: _createTF(context, fieldHints[index],
+                                ContactUsFields1.textFields[index],
+                                correct: false),
+                          ),
+                        ],
+                      ),
                 const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -67,7 +87,7 @@ class ContactUsFields1 extends StatelessWidget {
                     SizedBox(
                       height: 35,
                       child: Text(
-                        errors[index],
+                        ContactUsFields1.errors[index],
                         style: const TextStyle(
                           color: Colors.red,
                           fontSize: 13,
@@ -85,6 +105,7 @@ class ContactUsFields1 extends StatelessWidget {
                             child: ContactUsButton(
                               btnText: "next".tr(),
                               ContactStep: 1,
+                              callBack: () => setState(() {}),
                             ),
                           ),
                         ],
@@ -96,11 +117,8 @@ class ContactUsFields1 extends StatelessWidget {
         });
   }
 
-  Widget _createTF(
-    context,
-    String hint,
-    var controller,
-  ) {
+  Widget _createTF(context, String hint, var controller,
+      {bool correct = true}) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: TextField(
@@ -110,8 +128,13 @@ class ContactUsFields1 extends StatelessWidget {
         ),
         controller: controller,
         decoration: InputDecoration(
-          fillColor: Colors.transparent,
+          fillColor: mainColor,
           hintText: hint,
+          enabledBorder: UnderlineInputBorder(
+            borderSide: correct
+                ? const BorderSide(color: mainColor)
+                : const BorderSide(color: Colors.red),
+          ),
         ),
         cursorColor: Theme.of(context).primaryColor,
       ),

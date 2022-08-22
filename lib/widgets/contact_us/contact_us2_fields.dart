@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 import 'contact_us2_attach.dart';
 import 'contact_us_button.dart';
 
@@ -101,15 +101,10 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
               ),
               controller: ContactUsFields2.textFields[1],
               decoration: InputDecoration(
-                label: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
-                    Icon(
-                      Icons.keyboard_arrow_down_outlined,
-                      size: 45,
-                      color: mainColor,
-                    ),
-                  ],
+                suffixIcon: const Icon(
+                  Icons.keyboard_arrow_down_outlined,
+                  size: 45,
+                  color: mainColor,
                 ),
                 fillColor: Colors.transparent,
                 hintText: "inquiry".tr(),
@@ -224,6 +219,7 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
               child: ContactUsButton(
                 btnText: "send".tr(),
                 ContactStep: 2,
+                callBack: () => setState(() {}),
               ),
             ),
           ],
@@ -437,7 +433,8 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
     );
   }
 
-  Widget _createTF(context, String hint, var controller, {int? lines = 1}) {
+  Widget _createTF(context, String hint, var controller,
+      {int? lines = 1, bool correct = true}) {
     return Container(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -451,6 +448,11 @@ class _ContactUsFields2State extends State<ContactUsFields2> {
           decoration: InputDecoration(
             fillColor: Colors.transparent,
             hintText: hint,
+            enabledBorder: UnderlineInputBorder(
+              borderSide: correct
+                  ? const BorderSide(color: mainColor)
+                  : const BorderSide(color: Colors.red),
+            ),
           ),
           cursorColor: Theme.of(context).primaryColor,
         ),

@@ -20,7 +20,7 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
     const HomePage(),
     const HomePage(),
     const NewsListPage(),
-    const NewsListPage(),
+    const MorePage(),
     const MorePage(),
   ];
 

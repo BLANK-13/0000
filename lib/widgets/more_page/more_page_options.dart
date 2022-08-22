@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trainee_task/screens/contact_us1_page.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class MorePageOptions extends StatelessWidget {
   MorePageOptions({Key? key}) : super(key: key);

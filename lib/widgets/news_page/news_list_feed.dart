@@ -3,7 +3,7 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:trainee_task/models/news_model.dart';
 import 'package:trainee_task/screens/news_page.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class NewsListFeed extends StatelessWidget {
   const NewsListFeed({Key? key, required this.news}) : super(key: key);
@@ -12,6 +12,8 @@ class NewsListFeed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: news.length,
       itemBuilder: (BuildContext context, int index) {
         return Column(

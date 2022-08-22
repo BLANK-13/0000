@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 
 import '../constants.dart';
-import '../widgets/more_page_options.dart';
-import '../widgets/more_page_socials.dart';
+import '../widgets/more_page/more_page_options.dart';
+import '../widgets/more_page/more_page_socials.dart';
 
 class MorePage extends StatelessWidget {
   const MorePage({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:trainee_task/constants.dart';
-import 'package:trainee_task/widgets/news_app_bar.dart';
+import 'package:trainee_task/widgets/news_page/news_app_bar.dart';
 
 import '../models/news_model.dart';
 
