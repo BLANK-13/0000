@@ -1,6 +1,6 @@
 # SPL
 
-## Video of the Application's functionality below
+## Video of the Application's functionality:
 
 
 https://user-images.githubusercontent.com/76828700/188872124-6ccba71c-bc1b-41e9-bac0-bcb30644ef4a.mp4
